@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2025/06/21 22:51:37.470,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5PCH1.h</Transaction>
-    <Transaction>2025/06/21 22:51:38.910,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
-    <Transaction>2025/06/21 22:52:11.809,C:\Developer\Embarcadero Event\WindowsService\DemoTcpServicePCH1.h=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5PCH1.h</Transaction>
-    <Transaction>2025/06/21 22:52:11.852,C:\Developer\Embarcadero Event\WindowsService\Unit2.cpp=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
-    <Transaction>2025/06/21 22:52:11.852,C:\Developer\Embarcadero Event\WindowsService\Unit2.dfm=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
-    <Transaction>2025/06/21 22:52:11.852,C:\Developer\Embarcadero Event\WindowsService\Unit2.h=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.h</Transaction>
-    <Transaction>2025/06/21 22:52:11.900,C:\Developer\Embarcadero Event\WindowsService\DemoTcpService.cbproj=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5.cbproj</Transaction>
-    <Transaction>2025/06/21 22:52:22.074,C:\Developer\Embarcadero Event\WindowsService\UMainService.h=C:\Developer\Embarcadero Event\WindowsService\Unit2.h</Transaction>
-    <Transaction>2025/06/21 22:52:22.074,C:\Developer\Embarcadero Event\WindowsService\UMainService.cpp=C:\Developer\Embarcadero Event\WindowsService\Unit2.cpp</Transaction>
-    <Transaction>2025/06/21 22:52:22.074,C:\Developer\Embarcadero Event\WindowsService\UMainService.dfm=C:\Developer\Embarcadero Event\WindowsService\Unit2.dfm</Transaction>
+	<Transactions>
+    <Transaction>2025/06/21 22:51:37.000.470,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5PCH1.h</Transaction>
+    <Transaction>2025/06/21 22:51:38.000.910,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2025/06/21 22:52:11.000.852,C:\Developer\Embarcadero Event\WindowsService\Unit2.h=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.h</Transaction>
+    <Transaction>2025/06/21 22:52:11.000.852,C:\Developer\Embarcadero Event\WindowsService\Unit2.dfm=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2025/06/21 22:52:11.000.900,C:\Developer\Embarcadero Event\WindowsService\DemoTcpService.cbproj=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5.cbproj</Transaction>
+    <Transaction>2025/06/21 22:52:11.000.809,C:\Developer\Embarcadero Event\WindowsService\DemoTcpServicePCH1.h=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5PCH1.h</Transaction>
+    <Transaction>2025/06/21 22:52:11.000.852,C:\Developer\Embarcadero Event\WindowsService\Unit2.cpp=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2025/06/21 22:52:22.000.074,C:\Developer\Embarcadero Event\WindowsService\UMainService.h=C:\Developer\Embarcadero Event\WindowsService\Unit2.h</Transaction>
+    <Transaction>2025/06/21 22:52:22.000.074,C:\Developer\Embarcadero Event\WindowsService\UMainService.dfm=C:\Developer\Embarcadero Event\WindowsService\Unit2.dfm</Transaction>
+    <Transaction>2025/06/21 22:52:22.000.074,C:\Developer\Embarcadero Event\WindowsService\UMainService.cpp=C:\Developer\Embarcadero Event\WindowsService\Unit2.cpp</Transaction>
   </Transactions>
 </BorlandProject>

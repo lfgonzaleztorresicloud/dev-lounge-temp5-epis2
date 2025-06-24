@@ -1,0 +1,4 @@
+object DmMain: TDmMain
+  Height = 480
+  Width = 640
+end

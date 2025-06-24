@@ -43,3 +43,21 @@ static void freeWebModules()
 }
 #pragma exit freeWebModules 64
 
+void __fastcall TWebModule2::DSHTTPWebDispatcher1FormatResult(TObject *Sender,
+	TJSONValue *&ResultVal,TDBXCommand * const Command, bool &Handled)
+{
+    // Almacenamos lo que viene en ResultVal
+	auto LResultVal = ResultVal;
+	try {
+		// Asignamos a Resulval el contenido la posicion 0 del JSONArray
+		ResultVal = static_cast<TJSONArray*>(LResultVal)->Remove(0);
+	}
+	__finally {
+		// Liberamos la memoria de LResultVal
+		delete LResultVal;
+		// Permitimos que sea manejado el Resultado
+		Handled = true;
+    }
+}
+//---------------------------------------------------------------------------
+

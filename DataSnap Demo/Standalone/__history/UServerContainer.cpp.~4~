@@ -1,0 +1,58 @@
+//----------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+#if ! defined(__linux__)
+#include <tchar.h>
+#endif
+#include <stdio.h>
+#include <memory>
+#include <string>
+#include "UServerMethod.h"
+
+#include "UServerContainer.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+
+//---------------------------------------------------------------------------
+
+TServerContainer2 *ServerContainer2;
+TComponent *FModule;
+TDSServer *FDSServer;
+
+//---------------------------------------------------------------------------
+__fastcall TServerContainer2::TServerContainer2(TComponent* Owner)
+	: TDataModule(Owner)
+{
+	FDSServer = DSServer1;
+}
+//---------------------------------------------------------------------------
+__fastcall TServerContainer2::~TServerContainer2(void)
+{
+	FDSServer = NULL;
+}
+//----------------------------------------------------------------------------
+void __fastcall TServerContainer2::DSServerClass1GetClass(TDSServerClass *DSServerClass,
+          TPersistentClass &PersistentClass)
+{
+	PersistentClass =  __classid(TDevLoungeDemo);
+}
+//----------------------------------------------------------------------------
+
+TDSServer *DSServer(void)
+{
+	return FDSServer;
+}
+
+//---------------------------------------------------------------------------
+static void createContainer()
+{
+	FModule = new TServerContainer2(NULL);
+}
+static void freeContainer()
+{
+	free(FModule);
+}
+#pragma startup createContainer 64
+#pragma exit freeContainer 64
+

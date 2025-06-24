@@ -11,8 +11,9 @@
 #pragma hdrstop
 
 USEFORM("..\Standalone\UWebModuleMain.cpp", WebModule2); /* TWebModule: File Type */
-//USEFORM("..\Standalone\UServerMethod.cpp", ServerMethods2); /* TDataModule: File Type */
-//USEFORM("..\Standalone\UServerContainer.cpp", ServerContainer2); /* TDataModule: File Type */
+USEFORM("..\Standalone\UServerMethod.cpp", ServerMethods2); /* TDataModule: File Type */
+USEFORM("..\Standalone\UServerContainer.cpp", ServerContainer2); /* TDataModule: File Type */
+USEFORM("..\Standalone\UDmMain.cpp", DmMain); /* TDataModule: File Type */
 //---------------------------------------------------------------------------
 #define Application Webbroker::Application
 
@@ -38,7 +39,8 @@ int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void*)
       Application->Initialize();
      Application->WebModuleClass = WebModuleClass;
       ((TISAPIApplication*)Application)->OnTerminate = TerminateThreads;
-      Application->Run();
+      Application->CreateForm(__classid(TDmMain), &DmMain);
+		Application->Run();
     }
   }
   catch (Exception &exception)

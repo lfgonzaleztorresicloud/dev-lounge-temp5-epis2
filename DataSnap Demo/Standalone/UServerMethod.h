@@ -6,18 +6,32 @@
 #include <System.Classes.hpp>
 #include <DataSnap.DSServer.hpp>
 #include <Datasnap.DSProviderDataModuleAdapter.hpp>
+#include <System.JSON.hpp>
+#include "UDmMain.h"
 //---------------------------------------------------------------------------
-class DECLSPEC_DRTTI TServerMethods2 : public TDataModule
+class DECLSPEC_DRTTI TDevLoungeDemo : public TDataModule
 {
 __published:	// IDE-managed Components
 private:	// User declarations
 public:		// User declarations
-	__fastcall TServerMethods2(TComponent* Owner); 
-	System::UnicodeString EchoString(System::UnicodeString value);
-	System::UnicodeString  ReverseString(System::UnicodeString value);
+	__fastcall TDevLoungeDemo(TComponent* Owner);
+	// Obtener un Employee pasado su ID
+	System::Json::TJSONObject * GetEmployeeById(const uint32_t AId);
+	// Obtener todos los employees
+	System::Json::TJSONObject * GetAllEmployees(void);
+	// Obtener un pais pasado el Nombre
+	System::Json::TJSONObject * GetCountryByName(const System::UnicodeString AName);
+	// Obtener todos los paises
+	System::Json::TJSONObject * GetAllCountries(void);
+	// Adicionar un pais nuevo = HTTP POST
+	System::Json::TJSONObject * UpdateAddCountry(const System::Json::TJSONObject * AJsonCountry);
+	// Modificar un pais = HTTP PUT
+	System::Json::TJSONObject * AcceptUpdateCountry(const System::Json::TJSONObject * AJsonCountry);
+	// Eliminar un Pais
+    System::Json::TJSONObject * CancelDeleteCountry(const System::UnicodeString AName);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TServerMethods2 *ServerMethods2;
+extern PACKAGE TDevLoungeDemo *DevLoungeDemo;
 //---------------------------------------------------------------------------
 #endif
 

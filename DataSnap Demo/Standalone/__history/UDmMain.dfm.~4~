@@ -1,0 +1,17 @@
+object DmMain: TDmMain
+  Height = 480
+  Width = 640
+  object connEmployees: TFDConnection
+    Left = 120
+    Top = 80
+  end
+  object FDPhysIBDriverLink1: TFDPhysIBDriverLink
+    Left = 272
+    Top = 88
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 304
+    Top = 224
+  end
+end

@@ -1,0 +1,150 @@
+//---------------------------------------------------------------------------
+
+
+#pragma hdrstop
+
+#include "UDmMain.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma classgroup "Vcl.Controls.TControl"
+#pragma resource "*.dfm"
+TDmMain *DmMain;
+//---------------------------------------------------------------------------
+__fastcall TDmMain::TDmMain(TComponent* Owner)
+	: TDataModule(Owner)
+{
+}
+
+System::Json::TJSONObject * TDmMain::GetEmployeeById(const uint32_t AId)
+{
+	// Declarar el return
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	// Creamos el TFDQuery que gestionará la consulta
+	std::unique_ptr<TFDQuery> LQry(new TFDQuery(nullptr));
+	LQry->Connection = this->connEmployees;
+	LQry->SQL->Text = "select * from employee where emp_no = :emp_no";
+	LQry->Params->ParamByName("emp_no")->AsInteger = AId;
+	LQry->Active = true;
+	// Como es un solo registro solo validamos Eof
+	if(!LQry->Eof) {
+		// Recorremos todos los campos para armar el JSON
+		for(auto i = 0; i < LQry->Fields->Count; i++) {
+			// obtenemos el TField activo
+			auto LField = LQry->Fields->operator [](i);
+			_return->AddPair(LField->FieldName, LQry->FieldByName(LField->FieldName)->AsString);
+		}
+	}
+	return _return.release();
+}
+
+System::Json::TJSONArray * TDmMain::GetAllEmployees(void)
+{
+	// Declarar el return
+	std::unique_ptr<System::Json::TJSONArray> _return(new System::Json::TJSONArray());
+	// Creamos el TFDQuery que gestionará la consulta
+	std::unique_ptr<TFDQuery> LQry(new TFDQuery(nullptr));
+	LQry->Connection = this->connEmployees;
+	LQry->SQL->Text = "select * from employee";
+	LQry->Active = true;
+	// Como es un solo registro solo validamos Eof
+	while(!LQry->Eof) {
+		// Crearmos el JSON que almacenará el registro
+		auto LJsonRow = new System::Json::TJSONObject();
+		// Recorremos todos los campos para armar el JSON
+		for(auto i = 0; i < LQry->Fields->Count; i++) {
+			// obtenemos el TField activo
+			auto LField = LQry->Fields->operator [](i);
+			LJsonRow->AddPair(LField->FieldName, LQry->FieldByName(LField->FieldName)->AsString);
+		}
+		LQry->Next();
+		// Adicionamos al array
+		_return->AddElement(LJsonRow);
+	}
+	return _return.release();
+}
+
+System::Json::TJSONObject * TDmMain::GetCountryByName(const System::UnicodeString AName)
+{
+	// Declarar el return
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	// Creamos el TFDQuery que gestionará la consulta
+	std::unique_ptr<TFDQuery> LQry(new TFDQuery(nullptr));
+	LQry->Connection = this->connEmployees;
+	LQry->SQL->Text = "select * from country where country = :country";
+	LQry->Params->ParamByName("country")->AsString = AName;
+	LQry->Active = true;
+	// Como es un solo registro solo validamos Eof
+	if(!LQry->Eof) {
+		// Recorremos todos los campos para armar el JSON
+		for(auto i = 0; i < LQry->Fields->Count; i++) {
+			// obtenemos el TField activo
+			auto LField = LQry->Fields->operator [](i);
+			_return->AddPair(LField->FieldName, LQry->FieldByName(LField->FieldName)->AsString);
+		}
+	}
+	return _return.release();
+}
+
+System::Json::TJSONArray * TDmMain::GetAllCountries(void)
+{
+	// Declarar el return
+	std::unique_ptr<System::Json::TJSONArray> _return(new System::Json::TJSONArray());
+	// Creamos el TFDQuery que gestionará la consulta
+	std::unique_ptr<TFDQuery> LQry(new TFDQuery(nullptr));
+	LQry->Connection = this->connEmployees;
+	LQry->SQL->Text = "select * from country";
+	LQry->Active = true;
+	// Como es un solo registro solo validamos Eof
+	while(!LQry->Eof) {
+		// Crearmos el JSON que almacenará el registro
+		auto LJsonRow = new System::Json::TJSONObject();
+		// Recorremos todos los campos para armar el JSON
+		for(auto i = 0; i < LQry->Fields->Count; i++) {
+			// obtenemos el TField activo
+			auto LField = LQry->Fields->operator [](i);
+			LJsonRow->AddPair(LField->FieldName, LQry->FieldByName(LField->FieldName)->AsString);
+		}
+		LQry->Next();
+		// Adicionamos al array
+		_return->AddElement(LJsonRow);
+	}
+	return _return.release();
+}
+
+bool TDmMain::AddCountry(const System::UnicodeString AName, const System::UnicodeString ACurrency)
+{
+	// Creamos el TFDQuery que gestionará la consulta
+	std::unique_ptr<TFDQuery> LQry(new TFDQuery(nullptr));
+	LQry->Connection = this->connEmployees;
+	LQry->SQL->Text = "insert into country (country, currency) values (:country, :currency)";
+	LQry->Params->ParamByName("country")->AsString = AName;
+	LQry->Params->ParamByName("currency")->AsString = ACurrency;
+	try {
+		LQry->ExecSQL();
+		return true;
+	} catch (...) {
+		return false;
+	}
+}
+
+bool TDmMain::UpdateCountry(const System::UnicodeString AName, const System::UnicodeString ACurrency)
+{
+	// Creamos el TFDQuery que gestionará la consulta
+	std::unique_ptr<TFDQuery> LQry(new TFDQuery(nullptr));
+	LQry->Connection = this->connEmployees;
+	LQry->SQL->Text = "update country set currency = :currency where country = :country";
+	LQry->Params->ParamByName("country")->AsString = AName;
+	LQry->Params->ParamByName("currency")->AsString = ACurrency;
+	try {
+		LQry->ExecSQL();
+		return true;
+	} catch (...) {
+		return false;
+	}
+}
+
+bool TDmMain::DeleteCountry(const System::UnicodeString AName)
+{
+
+}
+

@@ -15,6 +15,7 @@
 #include <DataSnap.DSAuth.hpp>
 #include <Datasnap.DSHTTP.hpp>
 #include <IPPeerServer.hpp>
+#include <System.JSON.hpp>
 //---------------------------------------------------------------------------
 class TWebModule2 : public TWebModule
 {
@@ -23,6 +24,8 @@ __published:	// IDE-managed Components
 	void __fastcall WebModule2DefaultHandlerAction(TObject *Sender, TWebRequest *Request,
           TWebResponse *Response, bool &Handled);
 	void __fastcall WebModuleCreate(TObject *Sender);
+	void __fastcall DSHTTPWebDispatcher1FormatResult(TObject *Sender, TJSONValue *&ResultVal,
+          TDBXCommand * const Command, bool &Handled);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TWebModule2(TComponent* Owner);

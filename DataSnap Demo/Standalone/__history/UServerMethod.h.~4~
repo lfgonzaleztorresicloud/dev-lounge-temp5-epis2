@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+
+#ifndef UServerMethodH
+#define UServerMethodH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <DataSnap.DSServer.hpp>
+#include <Datasnap.DSProviderDataModuleAdapter.hpp>
+#include <System.JSON.hpp>
+//---------------------------------------------------------------------------
+class DECLSPEC_DRTTI TDevLoungeDemo : public TDataModule
+{
+__published:	// IDE-managed Components
+private:	// User declarations
+public:		// User declarations
+	__fastcall TDevLoungeDemo(TComponent* Owner);
+
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TDevLoungeDemo *DevLoungeDemo;
+//---------------------------------------------------------------------------
+#endif
+

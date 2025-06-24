@@ -160,6 +160,13 @@
         <CppCompile Include="DemoIsapi.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
+        <CppCompile Include="..\Standalone\UDmMain.cpp">
+            <Form>DmMain</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+            <DependentOn>..\Standalone\UDmMain.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
         <CppCompile Include="..\Standalone\UServerContainer.cpp">
             <Form>ServerContainer2</Form>
             <FormType>dfm</FormType>
@@ -184,6 +191,7 @@
         <FormResources Include="..\Standalone\UWebModuleMain.dfm"/>
         <FormResources Include="..\Standalone\UServerMethod.dfm"/>
         <FormResources Include="..\Standalone\UServerContainer.dfm"/>
+        <FormResources Include="..\Standalone\UDmMain.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -268,15 +276,15 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName=".\Win64x\Debug\DemoIsapi.dll" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win64x">
+                <DeployFile LocalName=".\Win64\Debug\DemoIsapi.dll" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win64">
                         <RemoteName>DemoIsapi.dll</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName=".\Win64x\Debug\DemoIsapi.pdb" Configuration="Debug" Class="DebugSymbols">
+                <DeployFile LocalName=".\Win64x\Debug\DemoIsapi.dll" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win64x">
-                        <RemoteName>DemoIsapi.pdb</RemoteName>
+                        <RemoteName>DemoIsapi.dll</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

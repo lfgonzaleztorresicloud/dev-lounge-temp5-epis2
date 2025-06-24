@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
+#include <memory>
 #pragma hdrstop
 
 #include "UServerMethod.h"
@@ -8,19 +9,133 @@
 #pragma package(smart_init)
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
-__fastcall TServerMethods2::TServerMethods2(TComponent* Owner)
+__fastcall TDevLoungeDemo::TDevLoungeDemo(TComponent* Owner)
 	: TDataModule(Owner)
 {
 }
-//----------------------------------------------------------------------------
-System::UnicodeString TServerMethods2::EchoString(System::UnicodeString value)
+//---------------------------------------------------------------------------
+System::Json::TJSONObject * TDevLoungeDemo::GetEmployeeById(const uint32_t AId)
 {
-    return value;
+	// Creamos la variable de salida
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	// Creamos el datamodulo que gestiona la conexiones con la base de datos
+	std::unique_ptr<TDmMain> LDmMain(new TDmMain(nullptr));
+	// Obtenemos el Employee pasado el Id
+	auto LJsonEmployee = LDmMain->GetEmployeeById(AId);
+	// Creamos la respuesta del Json
+	_return->AddPair("coderror", 0);
+	_return->AddPair("data", LJsonEmployee);
+	// Retornamos la variable
+    return _return.release();
 }
-//----------------------------------------------------------------------------
-System::UnicodeString TServerMethods2::ReverseString(System::UnicodeString value)
+//---------------------------------------------------------------------------
+System::Json::TJSONObject * TDevLoungeDemo::GetAllEmployees(void)
 {
-    return ::ReverseString(value);
+	// Creamos la variable de salida
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	// Creamos el datamodulo que gestiona la conexiones con la base de datos
+	std::unique_ptr<TDmMain> LDmMain(new TDmMain(nullptr));
+	// Obtenemos el Employee pasado el Id
+	auto LJsonEmployees = LDmMain->GetAllEmployees();
+	// Creamos la respuesta del Json
+	_return->AddPair("coderror", 0);
+	_return->AddPair("data", LJsonEmployees);
+	// Retornamos la variable
+	return _return.release();
 }
-//----------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+System::Json::TJSONObject * TDevLoungeDemo::GetCountryByName(const System::UnicodeString AName)
+{
+	// Creamos la variable de salida
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	// Creamos el datamodulo que gestiona la conexiones con la base de datos
+	std::unique_ptr<TDmMain> LDmMain(new TDmMain(nullptr));
+	// Obtenemos el Employee pasado el Id
+	auto LJsonCountry = LDmMain->GetCountryByName(AName);
+	// Creamos la respuesta del Json
+	_return->AddPair("coderror", 0);
+	_return->AddPair("data", LJsonCountry);
+	// Retornamos la variable
+	return _return.release();
+}
+//---------------------------------------------------------------------------
+System::Json::TJSONObject * TDevLoungeDemo::GetAllCountries(void)
+{
+	// Creamos la variable de salida
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	// Creamos el datamodulo que gestiona la conexiones con la base de datos
+	std::unique_ptr<TDmMain> LDmMain(new TDmMain(nullptr));
+	// Obtenemos el Employee pasado el Id
+	auto LJsonCountries = LDmMain->GetAllCountries();
+	// Creamos la respuesta del Json
+	_return->AddPair("coderror", 0);
+	_return->AddPair("data", LJsonCountries);
+	// Retornamos la variable
+	return _return.release();
+}
+//---------------------------------------------------------------------------
+System::Json::TJSONObject * TDevLoungeDemo::UpdateAddCountry(const System::Json::TJSONObject * AJsonCountry)
+{
+	// Creamos la variable de salida
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	// Creamos el datamodulo que gestiona la conexiones con la base de datos
+	std::unique_ptr<TDmMain> LDmMain(new TDmMain(nullptr));
+	// Obtenemos los parametros country and currency from AJsonCountry
+	auto LCountryName = const_cast<System::Json::TJSONObject*>(AJsonCountry)->GetValue("country")->Value();
+	auto LCountryCurrency = const_cast<TJSONObject*>(AJsonCountry)->GetValue("currency")->Value();
+	// Insertamos el pais
+	bool LAddCountry = LDmMain->AddCountry(LCountryName, LCountryCurrency);
+	// Creamos la respuesta del Json
+	if(LAddCountry) {
+		_return->AddPair("coderror", 0);
+		_return->AddPair("data", static_cast<TJSONObject*>(const_cast<System::Json::TJSONObject*>(AJsonCountry)->Clone()));
+	} else {
+		_return->AddPair("coderror", -1);
+		_return->AddPair("message", "Error creating the country");
+	}
+	// Retornamos la variable
+	return _return.release();
+}
+//---------------------------------------------------------------------------
+System::Json::TJSONObject * TDevLoungeDemo::AcceptUpdateCountry(const System::Json::TJSONObject * AJsonCountry)
+{
+	// Creamos la variable de salida
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	// Creamos el datamodulo que gestiona la conexiones con la base de datos
+	std::unique_ptr<TDmMain> LDmMain(new TDmMain(nullptr));
+	// Obtenemos los parametros country and currency from AJsonCountry
+	auto LCountryName = const_cast<System::Json::TJSONObject*>(AJsonCountry)->GetValue("country")->Value();
+	auto LCountryCurrency = const_cast<TJSONObject*>(AJsonCountry)->GetValue("currency")->Value();
+	// Actualizamos el pais
+	bool LUpdateCountry = LDmMain->UpdateCountry(LCountryName, LCountryCurrency);
+	// Creamos la respuesta del Json
+	if(LUpdateCountry) {
+		_return->AddPair("coderror", 0);
+		_return->AddPair("data", static_cast<TJSONObject*>(const_cast<System::Json::TJSONObject*>(AJsonCountry)->Clone()));
+	} else {
+		_return->AddPair("coderror", -1);
+		_return->AddPair("message", "Error updating the country");
+	}
+	// Retornamos la variable
+	return _return.release();
+}
+//---------------------------------------------------------------------------
+System::Json::TJSONObject * TDevLoungeDemo::CancelDeleteCountry(const System::UnicodeString AName)
+{
+	// Creamos la variable de salida
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	// Creamos el datamodulo que gestiona la conexiones con la base de datos
+	std::unique_ptr<TDmMain> LDmMain(new TDmMain(nullptr));
+	// Borramos el pais
+	bool LDeleteCountry = LDmMain->DeleteCountry(AName);
+	// Creamos la respuesta del Json
+	if(LDeleteCountry) {
+		_return->AddPair("coderror", 0);
+	} else {
+		_return->AddPair("coderror", -1);
+		_return->AddPair("message", "Error deleting the country");
+	}
+	// Retornamos la variable
+	return _return.release();
+}
 
