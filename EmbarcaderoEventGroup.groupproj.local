@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2025/06/21 21:55:56.000.467,C:\Developer\Embarcadero Event\DataSnap Demo\DataSnapGroup.groupproj=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj</Transaction>
-    <Transaction>2025/06/21 22:57:58.000.280,C:\Developer\Embarcadero Event\DataSnap Demo\DataSnapGroup.groupproj=C:\Developer\Embarcadero Event\EmbarcaderoEventGroup.groupproj</Transaction>
+    <Transaction>2025/06/21 21:55:56.000.467,C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj=C:\Developer\Embarcadero Event\DataSnap Demo\DataSnapGroup.groupproj</Transaction>
+    <Transaction>2025/06/21 22:57:58.000.280,C:\Developer\Embarcadero Event\EmbarcaderoEventGroup.groupproj=C:\Developer\Embarcadero Event\DataSnap Demo\DataSnapGroup.groupproj</Transaction>
   </Transactions>
 	<Default.Personality>
-		<Projects ActiveProject="C:\Developer\Embarcadero Event\DataSnap Demo\Standalone\DemoStandalone.cbproj"/>
+		<Projects ActiveProject="C:\Developer\Embarcadero Event\DemoCom+\DemoCOMCpp.cbproj"/>
 	</Default.Personality>
 </BorlandProject>

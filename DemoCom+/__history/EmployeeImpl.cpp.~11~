@@ -1,0 +1,83 @@
+// ---------------------------------------------------------------------------
+// EMPLOYEEIMPL : Implementation of TEmployeeImpl (CoClass: Employee, Interface: IEmployee)
+// ---------------------------------------------------------------------------
+#include <vcl.h>
+#include <memory>
+#include <System.JSON.hpp>
+#pragma hdrstop
+
+#include "EmployeeImpl.h"
+
+
+// ---------------------------------------------------------------------------
+// TEmployeeImpl
+// ---------------------------------------------------------------------------
+__fastcall TEmployeeImpl::TEmployeeImpl()
+{
+}
+
+
+// ---------------------------------------------------------------------------
+// TEmployeeImpl
+// ---------------------------------------------------------------------------
+__fastcall TEmployeeImpl::TEmployeeImpl(const System::_di_IInterface Controller)
+                              : inherited(Controller)
+{
+}
+
+
+// ---------------------------------------------------------------------------
+// TEmployeeImpl
+// ---------------------------------------------------------------------------
+__fastcall TEmployeeImpl::TEmployeeImpl(Comobj::TComObjectFactory* Factory,
+                                      const System::_di_IInterface Controller)
+                              : inherited(Factory, Controller)
+{
+}
+
+// ---------------------------------------------------------------------------
+// TEmployeeImpl - Class Factory
+// ---------------------------------------------------------------------------
+static void createFactory()
+{
+  new TCppComObjectFactory<TEmployeeImpl>(Comserv::GetComServer(),
+                           __classid(TEmployeeImpl),
+                           CLSID_Employee,
+                           "TEmployeeImpl",
+                           "",
+                           Comobj::ciMultiInstance,
+                           Comobj::tmApartment);
+}
+#pragma startup createFactory 32
+
+
+STDMETHODIMP TEmployeeImpl::GetEmployee(BSTR AId, BSTR* AData)
+{
+	// Se crea la instancia del Data Module
+	std::unique_ptr<TDmMain> LDmMain(new TDmMain(nullptr));
+	// Se invoca el method del datamodulo
+	auto LJsonEmployee = LDmMain->GetEmployeeById(StrToInt(AId));
+	// Armar el return
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	_return->AddPair("coderror", 0);
+	_return->AddPair("data", LJsonEmployee);
+	// Crear memoria y copiar el resultado
+	wcscpy(AData, _return->ToString().c_str());
+	return RESULT_OK;
+}
+
+STDMETHODIMP TEmployeeImpl::GetEmployees(BSTR* AData)
+{
+	// Se crea la instancia del Data Module
+	std::unique_ptr<TDmMain> LDmMain(new TDmMain(nullptr));
+	// Se invoca el method del datamodulo
+	auto LJsonEmployees = LDmMain->GetAllEmployees();
+	// Armar el return
+	std::unique_ptr<System::Json::TJSONObject> _return(new System::Json::TJSONObject());
+	_return->AddPair("coderror", 0);
+	_return->AddPair("data", LJsonEmployees);
+	// Transformar la respuesta en JSON to String;
+	AData = _return->ToString().c_str();
+	return RESULT_OK;
+}
+

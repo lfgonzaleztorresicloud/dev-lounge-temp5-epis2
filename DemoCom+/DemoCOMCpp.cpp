@@ -5,6 +5,8 @@
 #include <axbase.h>
 
 #include "EmployeeImpl.h"
+USEFORM("..\DataSnap Demo\Standalone\UDmMain.cpp", DmMain); /* TDataModule: File Type */
+//---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma link "System.Win.ComServ"
 

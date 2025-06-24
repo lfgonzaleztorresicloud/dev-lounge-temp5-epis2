@@ -7,6 +7,8 @@
 #include <System.Win.ComServ.hpp>
 #include <axbase.h>
 #include "DemoCOMCpp_TLB.h"
+#include "UDmMain.h"
+#include "CppDemo_TLB.h"
 
 // ---------------------------------------------------------------------------
 // TEmployeeImpl     Implements IEmployee, default interface of Employee
