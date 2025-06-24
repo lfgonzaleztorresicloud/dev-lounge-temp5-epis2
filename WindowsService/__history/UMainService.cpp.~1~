@@ -1,0 +1,24 @@
+//---------------------------------------------------------------------------
+#include "UMainService.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+
+TService2 *Service2;
+//---------------------------------------------------------------------------
+__fastcall TService2::TService2(TComponent* Owner)
+	: TService(Owner)
+{
+}
+
+void __stdcall ServiceController(unsigned CtrlCode)
+{
+	Service2->Controller(CtrlCode);
+}
+
+TServiceController __fastcall TService2::GetServiceController(void)
+{
+	return (TServiceController) ServiceController;
+}
+
+//---------------------------------------------------------------------------

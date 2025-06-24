@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+#ifndef UMainServiceH
+#define UMainServiceH
+//---------------------------------------------------------------------------
+#include <System.SysUtils.hpp>
+#include <System.Classes.hpp>
+#include <Vcl.SvcMgr.hpp>
+#include <vcl.h>
+//---------------------------------------------------------------------------
+class TService2 : public TService
+{
+__published:    // IDE-managed Components
+private:        // User declarations
+public:         // User declarations
+	__fastcall TService2(TComponent* Owner);
+	TServiceController __fastcall GetServiceController(void);
+
+	friend void __stdcall ServiceController(unsigned CtrlCode);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TService2 *Service2;
+//---------------------------------------------------------------------------
+#endif

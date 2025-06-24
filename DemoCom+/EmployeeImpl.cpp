@@ -1,0 +1,61 @@
+// ---------------------------------------------------------------------------
+// EMPLOYEEIMPL : Implementation of TEmployeeImpl (CoClass: Employee, Interface: IEmployee)
+// ---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "EmployeeImpl.h"
+
+
+// ---------------------------------------------------------------------------
+// TEmployeeImpl
+// ---------------------------------------------------------------------------
+__fastcall TEmployeeImpl::TEmployeeImpl()
+{
+}
+
+
+// ---------------------------------------------------------------------------
+// TEmployeeImpl
+// ---------------------------------------------------------------------------
+__fastcall TEmployeeImpl::TEmployeeImpl(const System::_di_IInterface Controller)
+                              : inherited(Controller)
+{
+}
+
+
+// ---------------------------------------------------------------------------
+// TEmployeeImpl
+// ---------------------------------------------------------------------------
+__fastcall TEmployeeImpl::TEmployeeImpl(Comobj::TComObjectFactory* Factory,
+                                      const System::_di_IInterface Controller)
+                              : inherited(Factory, Controller)
+{
+}
+
+// ---------------------------------------------------------------------------
+// TEmployeeImpl - Class Factory
+// ---------------------------------------------------------------------------
+static void createFactory()
+{
+  new TCppComObjectFactory<TEmployeeImpl>(Comserv::GetComServer(),
+                           __classid(TEmployeeImpl),
+                           CLSID_Employee,
+                           "TEmployeeImpl",
+                           "",
+                           Comobj::ciMultiInstance,
+                           Comobj::tmApartment);
+}
+#pragma startup createFactory 32
+
+
+STDMETHODIMP TEmployeeImpl::GetEmployee(BSTR AId, BSTR* AData)
+{
+
+}
+
+STDMETHODIMP TEmployeeImpl::GetEmployees(BSTR* AData)
+{
+
+}
+

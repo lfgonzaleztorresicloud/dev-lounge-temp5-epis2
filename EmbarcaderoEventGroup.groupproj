@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8DB721D4-2872-4D6D-8306-47BF19D4AEE8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DataSnap Demo\Standalone\DemoStandalone.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DataSnap Demo\Isapi\DemoIsapi.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WindowsService\DemoTcpService.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DemoCom+\DemoCOMCpp.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DemoStandalone">
+        <MSBuild Projects="DataSnap Demo\Standalone\DemoStandalone.cbproj"/>
+    </Target>
+    <Target Name="DemoStandalone:Clean">
+        <MSBuild Projects="DataSnap Demo\Standalone\DemoStandalone.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DemoStandalone:Make">
+        <MSBuild Projects="DataSnap Demo\Standalone\DemoStandalone.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="DemoIsapi">
+        <MSBuild Projects="DataSnap Demo\Isapi\DemoIsapi.cbproj"/>
+    </Target>
+    <Target Name="DemoIsapi:Clean">
+        <MSBuild Projects="DataSnap Demo\Isapi\DemoIsapi.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DemoIsapi:Make">
+        <MSBuild Projects="DataSnap Demo\Isapi\DemoIsapi.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="DemoTcpService">
+        <MSBuild Projects="WindowsService\DemoTcpService.cbproj"/>
+    </Target>
+    <Target Name="DemoTcpService:Clean">
+        <MSBuild Projects="WindowsService\DemoTcpService.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DemoTcpService:Make">
+        <MSBuild Projects="WindowsService\DemoTcpService.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="DemoCOMCpp">
+        <MSBuild Projects="DemoCom+\DemoCOMCpp.cbproj"/>
+    </Target>
+    <Target Name="DemoCOMCpp:Clean">
+        <MSBuild Projects="DemoCom+\DemoCOMCpp.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DemoCOMCpp:Make">
+        <MSBuild Projects="DemoCom+\DemoCOMCpp.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DemoStandalone;DemoIsapi;DemoTcpService;DemoCOMCpp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DemoStandalone:Clean;DemoIsapi:Clean;DemoTcpService:Clean;DemoCOMCpp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DemoStandalone:Make;DemoIsapi:Make;DemoTcpService:Make;DemoCOMCpp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
