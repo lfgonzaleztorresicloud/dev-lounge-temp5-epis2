@@ -3,6 +3,7 @@
 // ---------------------------------------------------------------------------
 #include <vcl.h>
 #include <memory>
+#include <oleauto.h>
 #include <System.JSON.hpp>
 #pragma hdrstop
 
@@ -76,7 +77,7 @@ STDMETHODIMP TEmployeeImpl::GetEmployee(BSTR AId, BSTR* AData)
 	_return->AddPair("coderror", 0);
 	_return->AddPair("data", LJsonEmployee);
 	// Crear memoria y copiar el resultado
-	wcscpy((*AData), _return->ToString().c_str());
+	*AData = SysAllocString(_return->ToString().c_str());
 	return 0;
 }
 
@@ -91,7 +92,7 @@ STDMETHODIMP TEmployeeImpl::GetEmployees(BSTR* AData)
 	_return->AddPair("coderror", 0);
 	_return->AddPair("data", LJsonEmployees);
 	// Transformar la respuesta en JSON to String;
-	wcscpy((*AData), _return->ToString().c_str());
+	*AData = SysAllocString(_return->ToString().c_str());
 	return 0;
 }
 

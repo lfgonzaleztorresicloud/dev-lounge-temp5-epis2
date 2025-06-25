@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2025/06/24 23:38:21.867,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2025/06/24 23:39:00.792,C:\Developer\Embarcadero Event\DemoCOM+ClientDelphi\UFrmMain.dfm=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2025/06/24 23:39:00.792,C:\Developer\Embarcadero Event\DemoCOM+ClientDelphi\UFrmMain.pas=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2025/06/24 23:39:08.971,C:\Developer\Embarcadero Event\DemoCOM+ClientDelphi\DemoDelphiComPlus.dproj=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5.dproj</Transaction>
+    <Transaction>2025/06/24 23:39:46.474,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\23.0\Imports\DemoCOMCpp_TLB.pas</Transaction>
+    <Transaction>2025/06/25 00:05:32.279,C:\Developer\Embarcadero Event\DemoCOM+ClientDelphi\DemoCOMCpp_TLB.pas=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\23.0\Imports\DemoCOMCpp_TLB.pas</Transaction>
+  </Transactions>
+</BorlandProject>

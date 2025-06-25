@@ -4,6 +4,7 @@ object DemoResource: TDemoResource
   object FDConnection1: TFDConnection
     Params.Strings = (
       'ConnectionDef=EMPLOYEE')
+    Connected = True
     LoginPrompt = False
     Left = 30
     Top = 16
@@ -11,7 +12,7 @@ object DemoResource: TDemoResource
   object qryCOUNTRY: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      'select * from COUNTRY'
+      'select country as id, currency from COUNTRY'
       '{if !SORT}order by !SORT{fi}')
     Left = 130
     Top = 16
@@ -25,7 +26,7 @@ object DemoResource: TDemoResource
     AllowedActions = [List, Get, Post, Put, Delete]
     DataSet = qryCOUNTRY
     Left = 130
-    Top = 64
+    Top = 80
   end
   object qryCUSTOMER: TFDQuery
     Connection = FDConnection1
@@ -44,7 +45,7 @@ object DemoResource: TDemoResource
     AllowedActions = [List, Get, Post, Put, Delete]
     DataSet = qryCUSTOMER
     Left = 230
-    Top = 64
+    Top = 80
   end
   object qryEMPLOYEE: TFDQuery
     Connection = FDConnection1
@@ -63,6 +64,6 @@ object DemoResource: TDemoResource
     AllowedActions = [List, Get, Post, Put, Delete]
     DataSet = qryEMPLOYEE
     Left = 330
-    Top = 64
+    Top = 80
   end
 end
