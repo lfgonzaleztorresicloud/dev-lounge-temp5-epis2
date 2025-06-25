@@ -21,6 +21,9 @@
         <Projects Include="DemoCOM+ClientDelphi\DemoDelphiComPlus.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="DemoTCPClient\DemoTcpClient.cbproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -83,14 +86,23 @@
     <Target Name="DemoDelphiComPlus:Make">
         <MSBuild Projects="DemoCOM+ClientDelphi\DemoDelphiComPlus.dproj" Targets="Make"/>
     </Target>
+    <Target Name="DemoTcpClient">
+        <MSBuild Projects="DemoTCPClient\DemoTcpClient.cbproj"/>
+    </Target>
+    <Target Name="DemoTcpClient:Clean">
+        <MSBuild Projects="DemoTCPClient\DemoTcpClient.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DemoTcpClient:Make">
+        <MSBuild Projects="DemoTCPClient\DemoTcpClient.cbproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DemoStandalone;DemoIsapi;DemoTcpService;DemoCOMCpp;RADServerDemo;DemoDelphiComPlus"/>
+        <CallTarget Targets="DemoStandalone;DemoIsapi;DemoTcpService;DemoCOMCpp;RADServerDemo;DemoDelphiComPlus;DemoTcpClient"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DemoStandalone:Clean;DemoIsapi:Clean;DemoTcpService:Clean;DemoCOMCpp:Clean;RADServerDemo:Clean;DemoDelphiComPlus:Clean"/>
+        <CallTarget Targets="DemoStandalone:Clean;DemoIsapi:Clean;DemoTcpService:Clean;DemoCOMCpp:Clean;RADServerDemo:Clean;DemoDelphiComPlus:Clean;DemoTcpClient:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DemoStandalone:Make;DemoIsapi:Make;DemoTcpService:Make;DemoCOMCpp:Make;RADServerDemo:Make;DemoDelphiComPlus:Make"/>
+        <CallTarget Targets="DemoStandalone:Make;DemoIsapi:Make;DemoTcpService:Make;DemoCOMCpp:Make;RADServerDemo:Make;DemoDelphiComPlus:Make;DemoTcpClient:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
