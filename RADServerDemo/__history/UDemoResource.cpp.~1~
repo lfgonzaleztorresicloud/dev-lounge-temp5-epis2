@@ -1,0 +1,60 @@
+//---------------------------------------------------------------------------
+#pragma hdrstop
+
+#include "UDemoResource.h"
+#include <memory>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma classgroup "System.Classes.TPersistent"
+#pragma resource "*.dfm"
+//---------------------------------------------------------------------------
+__fastcall TDemoResourceResource1::TDemoResourceResource1(TComponent* Owner)
+	: TDataModule(Owner)
+{
+}
+
+void TDemoResourceResource1::Get(TEndpointContext* AContext, TEndpointRequest* ARequest, TEndpointResponse* AResponse)
+{
+	// Sample code
+	AResponse->Body->SetValue(new TJSONString("DemoResource"), true);
+}
+
+void TDemoResourceResource1::GetItem(TEndpointContext* AContext, TEndpointRequest* ARequest, TEndpointResponse* AResponse)
+{
+	String item;
+	item = ARequest->Params->Values["item"];
+	// Sample code
+	AResponse->Body->SetValue(new TJSONString("DemoResource " +  item), true);
+}
+
+void TDemoResourceResource1::Post(TEndpointContext* AContext, TEndpointRequest* ARequest, TEndpointResponse* AResponse)
+{
+}
+
+void TDemoResourceResource1::PutItem(TEndpointContext* AContext, TEndpointRequest* ARequest, TEndpointResponse* AResponse)
+{
+	String item;
+	item = ARequest->Params->Values["item"];
+}
+
+void TDemoResourceResource1::DeleteItem(TEndpointContext* AContext, TEndpointRequest* ARequest, TEndpointResponse* AResponse)
+{
+	String item;
+	item = ARequest->Params->Values["item"];
+}
+
+static void Register()
+{
+    std::unique_ptr<TEMSResourceAttributes> attributes(new TEMSResourceAttributes());
+    attributes->ResourceName = "DemoResource";
+    attributes->ResourceSuffix["dsrCOUNTRY"] = "COUNTRY";
+    attributes->ResourceSuffix["dsrCUSTOMER"] = "CUSTOMER";
+    attributes->ResourceSuffix["dsrEMPLOYEE"] = "EMPLOYEE";
+
+    attributes->ResourceSuffix["GetItem"] = "{item}";
+    attributes->ResourceSuffix["PutItem"] = "{item}";
+    attributes->ResourceSuffix["DeleteItem"] = "{item}";
+    RegisterResource(__typeinfo(TDemoResourceResource1), attributes.release());
+}
+
+#pragma startup Register 32

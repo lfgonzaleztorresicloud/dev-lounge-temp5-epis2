@@ -15,6 +15,9 @@
         <Projects Include="DemoCom+\DemoCOMCpp.cbproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="RADServerDemo\RADServerDemo.cbproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -59,14 +62,23 @@
     <Target Name="DemoCOMCpp:Make">
         <MSBuild Projects="DemoCom+\DemoCOMCpp.cbproj" Targets="Make"/>
     </Target>
+    <Target Name="RADServerDemo">
+        <MSBuild Projects="RADServerDemo\RADServerDemo.cbproj"/>
+    </Target>
+    <Target Name="RADServerDemo:Clean">
+        <MSBuild Projects="RADServerDemo\RADServerDemo.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RADServerDemo:Make">
+        <MSBuild Projects="RADServerDemo\RADServerDemo.cbproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DemoStandalone;DemoIsapi;DemoTcpService;DemoCOMCpp"/>
+        <CallTarget Targets="DemoStandalone;DemoIsapi;DemoTcpService;DemoCOMCpp;RADServerDemo"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DemoStandalone:Clean;DemoIsapi:Clean;DemoTcpService:Clean;DemoCOMCpp:Clean"/>
+        <CallTarget Targets="DemoStandalone:Clean;DemoIsapi:Clean;DemoTcpService:Clean;DemoCOMCpp:Clean;RADServerDemo:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DemoStandalone:Make;DemoIsapi:Make;DemoTcpService:Make;DemoCOMCpp:Make"/>
+        <CallTarget Targets="DemoStandalone:Make;DemoIsapi:Make;DemoTcpService:Make;DemoCOMCpp:Make;RADServerDemo:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

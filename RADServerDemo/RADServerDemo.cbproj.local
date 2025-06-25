@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2025/06/24 22:43:31.362,=emsserverapi.bpi</Transaction>
+    <Transaction>2025/06/24 22:43:31.373,=rtl.bpi</Transaction>
+    <Transaction>2025/06/24 22:43:31.373,=dbrtl.bpi</Transaction>
+    <Transaction>2025/06/24 22:43:31.373,=emsserverresource.bpi</Transaction>
+    <Transaction>2025/06/24 22:43:31.378,=FireDACCommonDriver.bpi</Transaction>
+    <Transaction>2025/06/24 22:43:31.378,=FireDACCommon.bpi</Transaction>
+    <Transaction>2025/06/24 22:43:31.378,=FireDAC.bpi</Transaction>
+    <Transaction>2025/06/24 22:43:31.378,=FireDACIBDriver.bpi</Transaction>
+    <Transaction>2025/06/24 22:43:31.482,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2025/06/24 22:43:51.989,C:\Developer\Embarcadero Event\RADServerDemo\Unit2.h=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.h</Transaction>
+    <Transaction>2025/06/24 22:43:51.989,C:\Developer\Embarcadero Event\RADServerDemo\Unit2.cpp=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2025/06/24 22:43:51.989,C:\Developer\Embarcadero Event\RADServerDemo\Unit2.dfm=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2025/06/24 22:43:52.005,C:\Developer\Embarcadero Event\RADServerDemo\RADServerDemo.cbproj=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5.cbproj</Transaction>
+    <Transaction>2025/06/24 22:43:57.108,C:\Developer\Embarcadero Event\RADServerDemo\UDemoResource.h=C:\Developer\Embarcadero Event\RADServerDemo\Unit2.h</Transaction>
+    <Transaction>2025/06/24 22:43:57.108,C:\Developer\Embarcadero Event\RADServerDemo\UDemoResource.cpp=C:\Developer\Embarcadero Event\RADServerDemo\Unit2.cpp</Transaction>
+    <Transaction>2025/06/24 22:43:57.108,C:\Developer\Embarcadero Event\RADServerDemo\UDemoResource.dfm=C:\Developer\Embarcadero Event\RADServerDemo\Unit2.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

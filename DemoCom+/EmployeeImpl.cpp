@@ -8,6 +8,20 @@
 
 #include "EmployeeImpl.h"
 
+namespace Democomcpp_tlb
+{
+
+
+// *********************************************************************//
+// GUIDS declared in the TypeLibrary
+// *********************************************************************//
+const GUID LIBID_DemoCOMCpp = {0xA4FD3A3A, 0x935A, 0x4077,{ 0x8E, 0xD8, 0x3F,0xB5, 0x28, 0x20,0xFE, 0x16} };
+const GUID IID_IEmployee = {0x6EB54BF8, 0xEEFF, 0x4A74,{ 0x88, 0x74, 0x9E,0x72, 0xCC, 0xE8,0x56, 0x07} };
+const GUID CLSID_Employee = {0x1B23744D, 0xF480, 0x4F6D,{ 0xB3, 0xFA, 0xE8,0x1C, 0x27, 0x7A,0xD9, 0xF0} };
+
+};     // namespace Democomcpp_tlb
+
+
 
 // ---------------------------------------------------------------------------
 // TEmployeeImpl
