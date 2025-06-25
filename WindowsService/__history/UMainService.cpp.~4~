@@ -37,17 +37,3 @@ void __fastcall TTcpDemoService::IdTCPServer1Execute(TIdContext *AContext)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TTcpDemoService::ServiceStart(TService *Sender, bool &Started)
-{
-	this->IdTCPServer1->Active = true;
-    Started = true;
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TTcpDemoService::ServiceStop(TService *Sender, bool &Stopped)
-{
-	this->IdTCPServer1->Active = false;
-    Stopped = true;
-}
-//---------------------------------------------------------------------------
-

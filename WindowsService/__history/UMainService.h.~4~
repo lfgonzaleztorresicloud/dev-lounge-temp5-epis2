@@ -18,7 +18,6 @@ __published:    // IDE-managed Components
 	TIdTCPServer *IdTCPServer1;
 	void __fastcall IdTCPServer1Execute(TIdContext *AContext);
 	void __fastcall ServiceStart(TService *Sender, bool &Started);
-	void __fastcall ServiceStop(TService *Sender, bool &Stopped);
 private:        // User declarations
 public:         // User declarations
 	__fastcall TTcpDemoService(TComponent* Owner);

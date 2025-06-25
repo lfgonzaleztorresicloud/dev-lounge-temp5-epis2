@@ -44,10 +44,3 @@ void __fastcall TTcpDemoService::ServiceStart(TService *Sender, bool &Started)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TTcpDemoService::ServiceStop(TService *Sender, bool &Stopped)
-{
-	this->IdTCPServer1->Active = false;
-    Stopped = true;
-}
-//---------------------------------------------------------------------------
-

@@ -32,22 +32,8 @@ void __fastcall TTcpDemoService::IdTCPServer1Execute(TIdContext *AContext)
 		// Leemos el contenido desde el IO Handler
 		auto LStrRequest = LIoHandler->ReadLn();
 		// Escribimos de Vuelta la String a la Inversa
-		LIoHandler->WriteLn(ReverseString(LStrRequest));
+		LIoHandler->WriteLn(ReverseString
     }
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TTcpDemoService::ServiceStart(TService *Sender, bool &Started)
-{
-	this->IdTCPServer1->Active = true;
-    Started = true;
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TTcpDemoService::ServiceStop(TService *Sender, bool &Stopped)
-{
-	this->IdTCPServer1->Active = false;
-    Stopped = true;
 }
 //---------------------------------------------------------------------------
 
