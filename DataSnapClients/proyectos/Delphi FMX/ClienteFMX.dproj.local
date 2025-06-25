@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/04/30 11:38:59.000.358,=E:\POCs\Cpp Demos\Unit1.pas</Transaction>
+    <Transaction>2025/05/14 12:43:52.000.053,=E:\POCs\Cpp Demos\Unit1.pas</Transaction>
+    <Transaction>2025/05/16 09:12:55.000.751,=E:\POCs\Cpp Demos\Unit1.pas</Transaction>
+    <Transaction>2025/05/21 11:09:35.000.792,=E:\POCs\Cpp Demos\Unit1.pas</Transaction>
+    <Transaction>2025/05/22 08:55:31.000.109,=E:\POCs\Cpp Demos\Unit1.pas</Transaction>
+    <Transaction>2025/05/27 17:53:00.000.325,=E:\POCs\Cpp Demos\Unit1.pas</Transaction>
+    <Transaction>2025/06/05 12:32:37.000.590,=E:\POCs\Cpp Demos\Unit1.pas</Transaction>
+    <Transaction>2025/06/05 12:33:46.000.996,E:\POCs\Cpp Demos\Unit1.pas=E:\Embarcadero\Talleres 2025\Talleres\Programando con RADStudio\WSA Project\WSA - Cliente\uMain.pas</Transaction>
+    <Transaction>2025/06/05 12:33:46.000.996,E:\POCs\Cpp Demos\Unit1.fmx=E:\Embarcadero\Talleres 2025\Talleres\Programando con RADStudio\WSA Project\WSA - Cliente\uMain.fmx</Transaction>
+    <Transaction>2025/06/05 12:33:58.000.184,E:\POCs\Cpp Demos\Project1.dproj=E:\Embarcadero\Talleres 2025\Talleres\Programando con RADStudio\WSA Project\WSA - Cliente\wsaCliente.dproj</Transaction>
+    <Transaction>2025/06/05 12:37:43.000.778,=E:\Embarcadero\Talleres 2025\Talleres\Programando con RADStudio\WSA Project\WSA - Cliente\Unit1.pas</Transaction>
+    <Transaction>2025/06/05 12:39:06.000.559,E:\Embarcadero\Talleres 2025\Talleres\Programando con RADStudio\WSA Project\WSA - Cliente\Unit1.pas=E:\Embarcadero\Talleres 2025\Talleres\Programando con RADStudio\WSA Project\WSA - Cliente\uEmpleadosClass.pas</Transaction>
+    <Transaction>2025/06/24 21:43:39.000.733,E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi FMX\uEmpleadosClass.pas=</Transaction>
+    <Transaction>2025/06/24 21:44:02.000.335,=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi FMX\uJsonClass.pas</Transaction>
+    <Transaction>2025/06/25 09:45:13.000.481,E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi FMX\ClienteFMX.dproj=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi FMX\wsaCliente.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android="bbe33fb5" Android64="bbe33fb5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

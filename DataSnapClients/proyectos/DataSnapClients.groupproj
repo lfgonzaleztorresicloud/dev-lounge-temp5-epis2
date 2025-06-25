@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{91AA14BD-B53F-4D04-90E0-3C95123C72DA}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Delphi VCL\ClienteVCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Delphi FMX\ClienteFMX.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ClienteVCL">
+        <MSBuild Projects="Delphi VCL\ClienteVCL.dproj"/>
+    </Target>
+    <Target Name="ClienteVCL:Clean">
+        <MSBuild Projects="Delphi VCL\ClienteVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClienteVCL:Make">
+        <MSBuild Projects="Delphi VCL\ClienteVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ClienteFMX">
+        <MSBuild Projects="Delphi FMX\ClienteFMX.dproj"/>
+    </Target>
+    <Target Name="ClienteFMX:Clean">
+        <MSBuild Projects="Delphi FMX\ClienteFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClienteFMX:Make">
+        <MSBuild Projects="Delphi FMX\ClienteFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ClienteVCL;ClienteFMX"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ClienteVCL:Clean;ClienteFMX:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ClienteVCL:Make;ClienteFMX:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

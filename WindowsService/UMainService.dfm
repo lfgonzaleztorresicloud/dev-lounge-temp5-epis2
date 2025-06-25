@@ -13,6 +13,6 @@ object TcpDemoService: TTcpDemoService
     DefaultPort = 0
     OnExecute = IdTCPServer1Execute
     Left = 248
-    Top = 168
+    Top = 152
   end
 end

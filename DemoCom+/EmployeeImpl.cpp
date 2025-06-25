@@ -78,7 +78,7 @@ STDMETHODIMP TEmployeeImpl::GetEmployee(BSTR AId, BSTR* AData)
 	_return->AddPair("data", LJsonEmployee);
 	// Crear memoria y copiar el resultado
 	*AData = SysAllocString(_return->ToString().c_str());
-	return 0;
+	return S_OK;
 }
 
 STDMETHODIMP TEmployeeImpl::GetEmployees(BSTR* AData)
@@ -93,6 +93,6 @@ STDMETHODIMP TEmployeeImpl::GetEmployees(BSTR* AData)
 	_return->AddPair("data", LJsonEmployees);
 	// Transformar la respuesta en JSON to String;
 	*AData = SysAllocString(_return->ToString().c_str());
-	return 0;
+	return S_OK;
 }
 

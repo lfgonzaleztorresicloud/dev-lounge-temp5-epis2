@@ -16,6 +16,7 @@ __fastcall TFrmMain::TFrmMain(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TFrmMain::btnSendMessageClick(TObject *Sender)
 {
+    // Validamos que el CheckBox este seleccionado
 	if(chkbxConnect->Checked) {
 		// Escribo en el Stream del Socket
 		IdTCPClient1->IOHandler->WriteLn(lbledtSendMessage->Text);
@@ -29,6 +30,7 @@ void __fastcall TFrmMain::btnSendMessageClick(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TFrmMain::chkbxConnectClick(TObject *Sender)
 {
+	// Valida que el checkbox este seleccionado
 	if(static_cast<TCheckBox*>(Sender)->Checked) {
 		IdTCPClient1->Connect();
 	} else {
@@ -39,6 +41,7 @@ void __fastcall TFrmMain::chkbxConnectClick(TObject *Sender)
 void __fastcall TFrmMain::IdTCPClient1Status(TObject *ASender, const TIdStatus AStatus,
           const UnicodeString AStatusText)
 {
+    // Escribe el Status en el Status Bar
     this->StatusBar1->SimpleText = AStatusText;
 }
 //---------------------------------------------------------------------------

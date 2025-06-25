@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/06/24 09:33:21.000.210,=E:\Embarcadero\Demos\17-JUN-25\Unit1.pas</Transaction>
+    <Transaction>2025/06/24 09:34:05.000.249,=E:\Embarcadero\Demos\17-JUN-25\Unit2.pas</Transaction>
+    <Transaction>2025/06/24 09:52:25.000.669,E:\Embarcadero\Demos\17-JUN-25\Unit1.dfm=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\Unit1.dfm</Transaction>
+    <Transaction>2025/06/24 09:52:25.000.669,E:\Embarcadero\Demos\17-JUN-25\Unit1.pas=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\Unit1.pas</Transaction>
+    <Transaction>2025/06/24 09:52:27.000.719,E:\Embarcadero\Demos\17-JUN-25\Unit2.pas=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\Unit2.pas</Transaction>
+    <Transaction>2025/06/24 09:52:30.000.605,E:\Embarcadero\Demos\17-JUN-25\Project1.dproj=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\Project1.dproj</Transaction>
+    <Transaction>2025/06/24 09:52:36.000.350,E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\Unit1.dfm=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\uMain.dfm</Transaction>
+    <Transaction>2025/06/24 09:52:36.000.350,E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\Unit1.pas=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\uMain.pas</Transaction>
+    <Transaction>2025/06/24 09:52:45.000.756,E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\Unit2.pas=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\uJsonClass.pas</Transaction>
+    <Transaction>2025/06/24 18:56:59.000.971,E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\ClienteVCL.dproj=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\Project1.dproj</Transaction>
+    <Transaction>2025/06/25 11:42:41.240,=E:\Embarcadero\Eventos 2025\Dev Lounge 2025\Episodio 2\projects\deb-lounge-temp5-epis2-apps\Delphi VCL\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

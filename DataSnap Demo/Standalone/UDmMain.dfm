@@ -11,7 +11,7 @@ object DmMain: TDmMain
     Top = 80
   end
   object FDPhysIBDriverLink1: TFDPhysIBDriverLink
-    Left = 272
+    Left = 280
     Top = 88
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor

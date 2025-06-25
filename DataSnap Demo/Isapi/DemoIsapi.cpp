@@ -38,8 +38,7 @@ int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void*)
       CoInitFlags = COINIT_MULTITHREADED;
       Application->Initialize();
      Application->WebModuleClass = WebModuleClass;
-      ((TISAPIApplication*)Application)->OnTerminate = TerminateThreads;
-      Application->CreateForm(__classid(TDmMain), &DmMain);
+	  ((TISAPIApplication*)Application)->OnTerminate = TerminateThreads;
 		Application->Run();
     }
   }

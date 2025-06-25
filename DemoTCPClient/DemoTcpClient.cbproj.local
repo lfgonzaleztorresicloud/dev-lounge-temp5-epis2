@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2025/06/25 00:09:52.228,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5PCH1.h</Transaction>
-    <Transaction>2025/06/25 00:09:52.408,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit4.cpp</Transaction>
-    <Transaction>2025/06/25 00:10:24.569,C:\Developer\Embarcadero Event\DemoTCPClient\DemoTcpClientPCH1.h=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5PCH1.h</Transaction>
-    <Transaction>2025/06/25 00:10:24.584,C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.dfm=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit4.dfm</Transaction>
-    <Transaction>2025/06/25 00:10:24.584,C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.cpp=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit4.cpp</Transaction>
-    <Transaction>2025/06/25 00:10:24.584,C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.h=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit4.h</Transaction>
-    <Transaction>2025/06/25 00:10:24.600,C:\Developer\Embarcadero Event\DemoTCPClient\DemoTcpClient.cbproj=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5.cbproj</Transaction>
-    <Transaction>2025/06/25 00:10:28.640,C:\Developer\Embarcadero Event\DemoTCPClient\UFrmMain.cpp=C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.cpp</Transaction>
-    <Transaction>2025/06/25 00:10:28.640,C:\Developer\Embarcadero Event\DemoTCPClient\UFrmMain.dfm=C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.dfm</Transaction>
-    <Transaction>2025/06/25 00:10:28.640,C:\Developer\Embarcadero Event\DemoTCPClient\UFrmMain.h=C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.h</Transaction>
+	<Transactions>
+    <Transaction>2025/06/25 00:09:52.000.408,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit4.cpp</Transaction>
+    <Transaction>2025/06/25 00:09:52.000.228,=C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5PCH1.h</Transaction>
+    <Transaction>2025/06/25 00:10:24.000.584,C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit4.dfm=C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.dfm</Transaction>
+    <Transaction>2025/06/25 00:10:24.000.600,C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5.cbproj=C:\Developer\Embarcadero Event\DemoTCPClient\DemoTcpClient.cbproj</Transaction>
+    <Transaction>2025/06/25 00:10:24.000.584,C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit4.h=C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.h</Transaction>
+    <Transaction>2025/06/25 00:10:24.000.584,C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Unit4.cpp=C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.cpp</Transaction>
+    <Transaction>2025/06/25 00:10:24.000.569,C:\Users\lfgonzalez\Documents\Embarcadero\Studio\Projects\Project5PCH1.h=C:\Developer\Embarcadero Event\DemoTCPClient\DemoTcpClientPCH1.h</Transaction>
+    <Transaction>2025/06/25 00:10:28.000.640,C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.dfm=C:\Developer\Embarcadero Event\DemoTCPClient\UFrmMain.dfm</Transaction>
+    <Transaction>2025/06/25 00:10:28.000.640,C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.h=C:\Developer\Embarcadero Event\DemoTCPClient\UFrmMain.h</Transaction>
+    <Transaction>2025/06/25 00:10:28.000.640,C:\Developer\Embarcadero Event\DemoTCPClient\Unit4.cpp=C:\Developer\Embarcadero Event\DemoTCPClient\UFrmMain.cpp</Transaction>
   </Transactions>
 </BorlandProject>
